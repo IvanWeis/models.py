@@ -1,0 +1,16 @@
+{% extends 'women/base.html' %}
+
+{% block content %}
+<!-- <h1>{{ title }}</h1> -->
+
+    <h3>Категории</h3>
+    {% for c in cats %}
+        <li><a href="{{c.get_absolute_url}}">{{ c.name }}</a></li> <!-- выводим имя Категории -->
+    {% endfor %}
+
+    <br><br>
+    <h3>Статьи</h3>
+    {% for p in posts %}
+        <h4>{{ p.title }}</h4>  <!-- выводим имя Женщины -->
+    {% endfor %}
+{% endblock %}
